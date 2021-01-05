@@ -110,6 +110,10 @@ textarea{
     gap: 30px;
 }
 
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+}
+
 .showcase-form{
     position: relative;
     top: 60px;
@@ -118,6 +122,7 @@ textarea{
     width: 450px;
     z-index: 100;
     justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
 
 }
 .showcase-form .form-control{
@@ -207,6 +212,7 @@ textarea{
 
 .languages {
     padding-top: 70px;
+    animation: slideInFromBottom ease-in 1s;
 }
 
 .languages .flex{
@@ -277,17 +283,63 @@ textarea{
     padding-top: 30px;
 }
 
+/* Animations */
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
 /* Tablets and under */
-@media(max-width: 768px){
+@media (max-width: 768px){
     .grid,
     .showcase .grid,
     .stats .grid,
     .cli .grid,
-    .cloud .grid {
+    .cloud .grid,
+    .features-main .grid{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
 
+    .features-head,
+    .features-sub-head {
+        text-align: center;
+    }
     .showcase {
         height: auto;
     }
@@ -306,7 +358,7 @@ textarea{
         margin: auto;
     }
 }
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .navbar{
         height: 110px;
         padding-bottom: 150px;
@@ -319,4 +371,13 @@ textarea{
     .navbar ul {
         background-color: rgba(0,0,0,0.1);
     }
+
+    .showcase-form {
+        width: 300px;
+    }
+
+    .showcase-text {
+        width: 300px
+    }
+    
 }
