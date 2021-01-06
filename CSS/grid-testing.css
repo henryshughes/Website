@@ -60,6 +60,9 @@ textarea{
     opacity: 1;
 }
 
+.hidden {
+    display: none;
+  }
 /* Navbar */
 .navbar{
     background-color: #047aed;
@@ -99,10 +102,15 @@ textarea{
     font-size: 30px;
 }
 
+.showcase .hidden p {
+    margin: 0;
+}
+
 .showcase p{
     margin: 20px 0;
     font-size: 16px;
 }
+
 
 .showcase .grid{
     overflow: visible;
