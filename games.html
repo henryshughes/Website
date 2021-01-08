@@ -30,8 +30,8 @@
     </div>
 
     <section class="game bg-light">
-        <h1 class="text-center underline">Rock Paper Scissors</h1>
-        <p class="text-center">Rules: Select your option, first to 5 rounds won wins the whole game</p>
+        <h1 class="text-center underline md">Rock Paper Scissors</h1>
+        <p class="text-center sm">Rules: Select your option, first to 5 rounds won wins the whole game</p>
         <div class="container grid grid-3">
             <div>
                 <button id="rock" class="btn-light" onclick="game('rock')"> <img class="p-1" src="Images/rock.png" alt=""></button>
@@ -65,6 +65,10 @@
                 </p>
             </div>
         </div>
+        <div class="container reset p-3">
+            <button class="btn-light container md text-center" onclick= "reset()" id="reset">Reset</button>
+        </div>
+        
     </section>
  
 

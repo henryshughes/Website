@@ -139,7 +139,7 @@ textarea{
 
 /* Game */
 
-.game button {
+.game .grid button {
     width: 200px;
     height: 200px;
     margin-top: 20px;
@@ -149,6 +149,18 @@ textarea{
     background-color: --light-color;
     border-radius: 10px;
     border: 5px solid grey;
+}
+
+.game .reset button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 200px;
+    height: 65px;
+    background-color: var(--light-color);
+    border-radius: 5px;
+    border: 5px solid black;
+    vertical-align: middle;
 }
 
 .game .card i{

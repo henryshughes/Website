@@ -11,6 +11,18 @@ function computerPlay(){
     const computerSelection = plays[randomNumber]
     return computerSelection
 }
+
+function reset() {
+    document.getElementById("playerScore").innerHTML = ('Player Score: ' + personCount)
+    document.getElementById("computerScore").innerHTML = ('Computer Score: ' + computerCount)
+    document.getElementById("ties").innerHTML = ('Ties: ' + tieCount)
+    document.getElementById("result").innerHTML = ('Game Result')
+    document.getElementById("gameResult").innerHTML = ('Play Again!')
+    document.getElementById("rock").disabled = false;
+    document.getElementById("paper").disabled = false;
+    document.getElementById("scissors").disabled = false;
+}
+
 function playRound(playerSelection, computerSelection){
     if (playerSelection == "rock" & computerSelection == "scissors"){
         document.getElementById("gameResult").innerHTML = 'Player Wins the Round'
@@ -49,41 +61,25 @@ function playRound(playerSelection, computerSelection){
     }
 
     if (computerCount == 5){
-        document.getElementById("result").innerHTML = ('Computer Wins the Game')
+        document.getElementById("result").innerHTML = ('Computer Wins the Game');
         computerCount = 0;
         personCount = 0;
         tieCount = 0;
         document.getElementById("rock").disabled = true;
         document.getElementById("paper").disabled = true;
         document.getElementById("scissors").disabled = true;
-        setTimeout(function(){
-            document.getElementById("playerScore").innerHTML = ('Player Score: ' + personCount)
-            document.getElementById("computerScore").innerHTML = ('Computer Score: ' + computerCount)
-            document.getElementById("ties").innerHTML = ('Ties: ' + tieCount)
-            document.getElementById("result").innerHTML = ('Game Result')
-            document.getElementById("gameResult").innerHTML = ('Play Again!')
-            document.getElementById("rock").disabled = false;
-            document.getElementById("paper").disabled = false;
-            document.getElementById("scissors").disabled = false;
-        }, 3000)
+        document.getElementById("gameResult").innerHTML = 'Click "Reset" to play again';
     }
     else if (personCount == 5){
-        document.getElementById("result").innerHTML = ('Player Wins the Game')
+        document.getElementById("result").innerHTML = ('Player Wins the Game');
         computerCount = 0;
         personCount = 0;
         tieCount = 0;
         document.getElementById("rock").disabled = true;
         document.getElementById("paper").disabled = true;
         document.getElementById("scissors").disabled = true;
-        setTimeout(function(){
-            document.getElementById("playerScore").innerHTML = ('Player Score: ' + personCount)
-            document.getElementById("computerScore").innerHTML = ('Computer Score: ' + computerCount)
-            document.getElementById("ties").innerHTML = ('Ties: ' + tieCount)
-            document.getElementById("result").innerHTML = ('Game Result')
-            document.getElementById("gameResult").innerHTML = ('Play Again!')
-            document.getElementById("rock").disabled = false;
-            document.getElementById("paper").disabled = false;
-            document.getElementById("scissors").disabled = false;
-        }, 3000)
+        document.getElementById("gameResult").innerHTML = 'Click "Reset" to play again';
     }
+
+    
 }
