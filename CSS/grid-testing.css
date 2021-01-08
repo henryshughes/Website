@@ -137,6 +137,55 @@ textarea{
     margin: 10px 0;
 }
 
+/* Game */
+
+.game button {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: --light-color;
+    border-radius: 10px;
+    border: 5px solid grey;
+}
+
+.game .card i{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.game .grid {
+    display: flex;
+    align-items: center;
+}
+
+.game button:hover {
+    transform: scale(0.95);
+    border: 5px solid red;
+}
+
+.game .outside{
+    height: 150px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.game .inside {
+    height: 150px;
+    max-width: 350px;
+    min-width: 350px;
+}
+
+.game .card p {
+    width: 200px;
+}
+
+.game h1{
+    margin: 0;
+    padding: 10px;
+}
 .showcase-form input[type='text'],
 .showcase-form input[type='email']{
     border: 0;

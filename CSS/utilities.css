@@ -10,7 +10,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .grid {
@@ -114,7 +113,19 @@
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
 /* Margin */
+
+.my-0 {
+    margin: 0;
+}
 .my-1 {
     margin: 1rem 0;
 }
@@ -133,6 +144,26 @@
 
 .my-5 {
     margin: 4rem 0;
+}
+
+.mx-1 {
+    margin: 1rem 0;
+}
+
+.mx-2 {
+    margin:  0 1.5rem;
+}
+
+.mx-3 {
+    margin: 0 2rem;
+}
+
+.mx-4 {
+    margin: 0 3rem;
+}
+
+.mx-5 {
+    margin: 0 4rem;
 }
 
 .m-1 {

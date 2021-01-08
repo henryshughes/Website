@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
+    <script src="grid-testing.js"></script>
 </head>
 <body>
     <!--Navbar-->
@@ -28,12 +29,43 @@
         </div>
     </div>
 
-   <!--Navbar-->
-   <div class="bg-secondary">
-    <div class="container flex">
-        <h1 class="logo md text-center"> This page is still being worked on! Please check back later for updates.</h1>
-    </div>
-    </div>
+    <section class="game bg-light">
+        <h1 class="text-center underline">Rock Paper Scissors</h1>
+        <p class="text-center">Rules: Select your option, first to 5 rounds won wins the whole game</p>
+        <div class="container grid grid-3">
+            <div>
+                <button id="rock" class="btn-light" onclick="game('rock')"> <img class="p-1" src="Images/rock.png" alt=""></button>
+            </div>
+            <div>
+                <button id="paper" class="btn-light" onclick="game('paper')"> <img class="p-1" src="Images/paper.png" alt=""></button>
+            </div>
+            <div>
+                <button id="scissors" class="btn-light" onclick="game('scissors')"> <img class = "p-1" src="Images/scissors.png" alt=""></button>
+            </div>
+        </div>
+        <div class="container grid grid-3">
+            <div class="card flex outside">
+                <i class="fas fa-arrows-alt fa-3x"></i>
+                <p class="m-1 text-left" id="gameResult">  
+                    Round Result
+                </p>
+            </div>
+            <div class="card flex inside">
+                <i class="fas fa-sort fa-3x"></i>
+                <ul>
+                    <li class="text-center mx-5" id="computerScore"> Computer Score: 0 </li>
+                    <li class="mx-5 text-center" id="playerScore"> Player Score: 0</li>
+                    <li class="mx-5 text-center" id="ties"> Ties: 0</li>
+                </ul>
+            </div>
+            <div class="card flex outside">
+                <i class="fas fa-dice-d20 fa-3x"></i>
+                <p class="m-1 text-left" id="result"> 
+                    Game Result
+                </p>
+            </div>
+        </div>
+    </section>
  
 
     <!-- Footer -->
