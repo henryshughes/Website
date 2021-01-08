@@ -155,11 +155,9 @@ textarea{
     display: flex;
     justify-content: center;
     align-self: center;
-    width: 200px;
-    height: 65px;
     background-color: var(--light-color);
     border-radius: 5px;
-    border: 5px solid black;
+    border: 3px solid black;
     vertical-align: middle;
 }
 
