@@ -125,7 +125,7 @@ textarea{
 .showcase-form{
     position: relative;
     top: 30px;
-    height: 200px;
+    height: 175px;
     overflow: visible;
     width: 300px;
     z-index: 100;
@@ -137,7 +137,7 @@ textarea{
     margin: 10px 0;
 }
 
-/* Game */
+/* Game 1*/
 
 .game .grid button {
     width: 200px;
@@ -159,6 +159,8 @@ textarea{
     border-radius: 5px;
     border: 3px solid black;
     vertical-align: middle;
+    width: 200px;
+    height: auto;
 }
 
 .game .card i{
@@ -195,6 +197,99 @@ textarea{
 .game h1{
     margin: 0;
     padding: 10px;
+}
+
+/* Game 2 */
+
+.game-2 h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+button{
+    border: 1px solid black;
+    height: 75px;
+    width: 75px;
+}
+
+.block {
+    width: (350/3)px;
+    height: (350/3)px;
+}
+
+.play-area {
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0;
+}
+
+.block:hover {
+    background-color:grey ;
+
+}
+
+.game-2 .play-area{
+    padding: 0;
+}
+
+.game-2 button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: var(--light-color);
+    border-radius: 5px;
+    border: 3px solid black;
+    vertical-align: middle;
+    width: 200px;
+    height: auto;
+}
+
+.game-2 button:hover { 
+    transform: scale(0.95);
+    border: 5px solid red;
+}
+
+.block {
+    background-color: white;
+    border: 3px solid black;
+}
+
+#block-1,
+#block-2,
+#block-3 {
+  border-top: none;
+}
+
+#block-1,
+#block-4,
+#block-7 {
+  border-left: none;
+}
+
+#block-7,
+#block-8,
+#block-9 {
+  border-bottom: none;
+}
+
+#block-3,
+#block-6,
+#block-9 {
+  border-right: none;
+}
+
+
+
+.align {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table {
+    display: flex;
 }
 .showcase-form input[type='text'],
 .showcase-form input[type='email']{

@@ -83,3 +83,10 @@ function playRound(playerSelection, computerSelection){
 
     
 }
+
+/*Game 2 */
+
+function block1(){
+    document.getElementById("block-1").innerHTML = "O";
+    console.log('Hello');
+}

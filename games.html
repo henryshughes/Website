@@ -13,6 +13,7 @@
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
     <script src="grid-testing.js"></script>
+    <script src="game-2.js"></script>
 </head>
 <body>
     <!--Navbar-->
@@ -70,6 +71,28 @@
         </div>
         
     </section>
+
+    <section class="game-2 bg-primary">
+        <h1 class="text-center underline md">Tic Tac Toe</h1>
+        <p class="text-center sm">The computer will go first, try and beat it!</p>
+        <div class="container play-area bg-light">
+            <div onclick="block1()" id = "block-1" class="block xl text-center"></div>
+            <div id = "block-2" class="block xl text-center"></div>
+            <div id = "block-3" class="block xl text-center"></div>
+            <div id = "block-4" class="block xl text-center"></div>
+            <div id = "block-5" class="block xl text-center"></div>
+            <div id = "block-6" class="block xl text-center"></div>
+            <div id = "block-7" class="block xl text-center"></div>
+            <div id = "block-8" class="block xl text-center"></div>
+            <div id = "block-9" class="block xl text-center"></div>
+        </div>
+        <h2 class="text-center" id="display-result"> Someone is gonna win</h2>
+        <div class="container reset p-3">
+            <button class="btn-light container md text-center" onclick= "" id="reset-2">Reset</button>
+        </div>
+
+    </section>
+ 
  
 
     <!-- Footer -->
