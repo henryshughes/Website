@@ -151,6 +151,8 @@ textarea{
     border: 5px solid grey;
 }
 
+
+
 .game .reset button {
     display: flex;
     justify-content: center;
@@ -200,11 +202,20 @@ textarea{
 }
 
 /* Game 2 */
+.test {
+    margin: 0px;
+    height: 5px;
+    background-color: #333;
+}
 
+.game-2 .play-area {
+    animation: slideInFromRight 1s ease-in;
+}
 .game-2 h1 {
     margin: 0;
     padding: 10px;
 }
+
 
 button{
     border: 1px solid black;
@@ -506,9 +517,14 @@ button{
     .showcase .grid,
     .stats .grid,
     .cli .grid,
-    .cloud .grid{
+    .cloud .grid,
+    .game .grid {
         grid-template-rows: 1fr;
         grid-template-columns: 1fr;
+    }
+
+    .game .grid {
+        display: unset;
     }
 
     .features-head p{
@@ -598,5 +614,9 @@ button{
 
     .features-head p{
         width: 350px;
+    }
+
+    .game p {
+        width: 300px;
     }
 }

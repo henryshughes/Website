@@ -29,9 +29,35 @@
         </div>
     </div>
 
+    <section class="test"></section>
+
+    <section class="game-2 bg-primary">
+        <h1 class="text-center underline md">Tic Tac Toe</h1>
+        <p class="text-center smmd">The computer will go first, try and beat it!</p>
+        <div class="container reset p-3">
+            <button class="btn-light container md text-center" onclick= "computer_turn()" id="reset-2">Play!</button>
+        </div>
+        <h2 class="text-center" id="turn"></h2>
+        <div class="container play-area bg-light">
+            <div onclick="block1()" id = "block-1" class="block xl text-center"></div>
+            <div onclick="block2()" id = "block-2" class="block xl text-center"></div>
+            <div onclick="block3()" id = "block-3" class="block xl text-center"></div>
+            <div onclick="block4()" id = "block-4" class="block xl text-center"></div>
+            <div onclick="block5()" id = "block-5" class="block xl text-center"></div>
+            <div onclick="block6()" id = "block-6" class="block xl text-center"></div>
+            <div onclick="block7()" id = "block-7" class="block xl text-center"></div>
+            <div onclick="block8()" id = "block-8" class="block xl text-center"></div>
+            <div onclick="block9()" id = "block-9" class="block xl text-center"></div>
+        </div>
+        <h2 class="text-center" id="display-result"> </h2>
+        <div class="container reset p-3">
+            <button class="btn-light container md text-center" onclick= "reset()" id="reset-2">Reset</button>
+        </div>
+    </section>
+
     <section class="game bg-light">
         <h1 class="text-center underline md">Rock Paper Scissors</h1>
-        <p class="text-center sm">Rules: Select your option, first to 5 rounds won wins the whole game</p>
+        <p class="text-center smmd">Rules: Select your option, first to 5 rounds won wins the whole game</p>
         <div class="container grid grid-3">
             <div>
                 <button id="rock" class="btn-light" onclick="game('rock')"> <img class="p-1" src="Images/rock.png" alt=""></button>
@@ -70,32 +96,6 @@
         </div>
         
     </section>
-
-    <section class="game-2 bg-primary">
-        <h1 class="text-center underline md">Tic Tac Toe</h1>
-        <p class="text-center sm">The computer will go first, try and beat it!</p>
-        <div class="container reset p-3">
-            <button class="btn-light container md text-center" onclick= "computer_turn()" id="reset-2">Play!</button>
-        </div>
-        <h2 class="text-center" id="turn"></h2>
-        <div class="container play-area bg-light">
-            <div onclick="block1()" id = "block-1" class="block xl text-center"></div>
-            <div onclick="block2()" id = "block-2" class="block xl text-center"></div>
-            <div onclick="block3()" id = "block-3" class="block xl text-center"></div>
-            <div onclick="block4()" id = "block-4" class="block xl text-center"></div>
-            <div onclick="block5()" id = "block-5" class="block xl text-center"></div>
-            <div onclick="block6()" id = "block-6" class="block xl text-center"></div>
-            <div onclick="block7()" id = "block-7" class="block xl text-center"></div>
-            <div onclick="block8()" id = "block-8" class="block xl text-center"></div>
-            <div onclick="block9()" id = "block-9" class="block xl text-center"></div>
-        </div>
-        <h2 class="text-center" id="display-result"> Someone is gonna win</h2>
-        <div class="container reset p-3">
-            <button class="btn-light container md text-center" onclick= "" id="reset-2">Reset</button>
-        </div>
-    </section>
- 
- 
 
     <!-- Footer -->
     <footer class="footer bg-dark py-5">

@@ -92,9 +92,7 @@ function playRound(playerSelection, computerSelection){
     
 }
 
-/*Game 2 */
-
-var playerCount = 0;
+/* Game 2 */
 
 // Track whose turn it is
 const turn = "Computer";
@@ -115,6 +113,10 @@ var board = {
     block9: ""
 };
 
+// Variable to track if the game has been started and ended
+var activated = false;
+var over = false;
+
 // Different combinations to win the game
 combinations = [['block1', 'block2', 'block3'], ['block4', 
                 'block5', 'block6'], ['block7', 
@@ -127,169 +129,231 @@ combinations = [['block1', 'block2', 'block3'], ['block4',
 
 // Onclick functions, which trigger computer's turn as well
 function block1(){
-
-    if ((document.getElementById("block-1").innerHTML).length == 0) {
-        document.getElementById("block-1").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block1 = "O";
-        turn_list[(turn_list.length)] = "block1";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    if (activated == true && over == false) {
+        if ((document.getElementById("block-1").innerHTML).length == 0) {
+            document.getElementById("block-1").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block1 = "O";
+            turn_list[(turn_list.length)] = "block1";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
+    }
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
     }
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
+
 }
 
 function block2(){
-
-    if ((document.getElementById("block-2").innerHTML).length == 0) {
-        document.getElementById("block-2").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block2 = "O";
-        turn_list[(turn_list.length)] = "block2";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    if (activated == true && over == false) {
+        if ((document.getElementById("block-2").innerHTML).length == 0) {
+            document.getElementById("block-2").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block2 = "O";
+            turn_list[(turn_list.length)] = "block2";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
+    }
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
     }
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
-    
 }
 
 function block3(){
-
-    if ((document.getElementById("block-3").innerHTML).length == 0) {
-        document.getElementById("block-3").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block3 = "O";
-        turn_list[(turn_list.length)] = "block3";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    if (activated == true && over == false) {
+        if ((document.getElementById("block-3").innerHTML).length == 0) {
+            document.getElementById("block-3").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block3 = "O";
+            turn_list[(turn_list.length)] = "block3";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
+    }
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
     }
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
+
     
 }
 
 function block4(){
-
-    if ((document.getElementById("block-4").innerHTML).length == 0) {
-        document.getElementById("block-4").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block4 = "O";
-        turn_list[(turn_list.length)] = "block4";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    if (activated == true && over == false) {
+        if ((document.getElementById("block-4").innerHTML).length == 0) {
+            document.getElementById("block-4").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block4 = "O";
+            turn_list[(turn_list.length)] = "block4";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
+    }
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
     }
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
+
     
 }
 
 function block5(){
-
-    if ((document.getElementById("block-5").innerHTML).length == 0) {
-        document.getElementById("block-5").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block5 = "O";
-        turn_list[(turn_list.length)] = "block5";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    if (activated == true && over == false) {
+        if ((document.getElementById("block-5").innerHTML).length == 0) {
+            document.getElementById("block-5").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block5 = "O";
+            turn_list[(turn_list.length)] = "block5";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
+    }
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
     }
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
+
 }
 
 function block6(){
-
-    if ((document.getElementById("block-6").innerHTML).length == 0) {
-        document.getElementById("block-6").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block6 = "O";
-        turn_list[(turn_list.length)] = "block6";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    if (activated == true && over == false) {
+        if ((document.getElementById("block-6").innerHTML).length == 0) {
+            document.getElementById("block-6").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block6 = "O";
+            turn_list[(turn_list.length)] = "block6";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
+    }
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
     }
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
+
 }
 
 function block7(){
-
-    if ((document.getElementById("block-7").innerHTML).length == 0) {
-        document.getElementById("block-7").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block7 = "O";
-        turn_list[(turn_list.length)] = "block7";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    if (activated == true && over == false) {
+        if ((document.getElementById("block-7").innerHTML).length == 0) {
+            document.getElementById("block-7").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block7 = "O";
+            turn_list[(turn_list.length)] = "block7";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
+    }
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
     }
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
-    
 }
 
 function block8(){
+    if (activated == true && over == false) {
+        if ((document.getElementById("block-8").innerHTML).length == 0) {
+            document.getElementById("block-8").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block8 = "O";
+            turn_list[(turn_list.length)] = "block8";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
+    }
 
-    if ((document.getElementById("block-8").innerHTML).length == 0) {
-        document.getElementById("block-8").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block8 = "O";
-        turn_list[(turn_list.length)] = "block8";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
     }
+
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
-    
+
 }
 
 function block9(){
 
-    if ((document.getElementById("block-9").innerHTML).length == 0) {
-        document.getElementById("block-9").innerHTML = "O";
-        document.getElementById("turn").innerHTML = "It is the computer's turn";
-        playerCount ++;
-        board.block9 = "O";
-        turn_list[(turn_list.length)] = "block9";
-        check();
-        computer_turn();
-        document.getElementById("turn").innerHTML = "It is your turn";
-        const turn = "Computer";
+    if(activated == true && over == false) {
+        if ((document.getElementById("block-9").innerHTML).length == 0) {
+            document.getElementById("block-9").innerHTML = "O";
+            document.getElementById("turn").innerHTML = "It is the computer's turn";
+            board.block9 = "O";
+            turn_list[(turn_list.length)] = "block9";
+            document.getElementById("turn").innerHTML = "It is your turn";
+            check();
+            computer_turn();
+            const turn = "Computer";
+        }
+        else {
+            alert('Invalid move, please try again');
+        }
     }
+
+    else if (activated == true && over == true) {
+        alert('This game is over. Please click the "Reset" button to begin a new game');
+    }
+
     else {
-        alert('Invalid move, please try again');
+        alert('Please click the "Play!" button to begin the game');
     }
     
 }
@@ -310,9 +374,14 @@ function win(board, combinations) {
                 count += 1;
             }
             if (count == 2) { 
-                x = true;
-                move = true;
-                break;
+                if (board[combinations[k][j+1]] == 'O'){
+                    continue;
+                }    
+                else {
+                    x = true;
+                    move = true;
+                    break;
+                }
             }
         }
         if (x != true) {
@@ -340,9 +409,16 @@ function stop(board, combinations) {
                 count -= 1;
             }
             if (count == 2) { 
-                x = true;
-                move = true;
-                break;
+                if (count == 2) { 
+                    if (board[combinations[k][j+1]] == 'X'){
+                        continue;
+                    }    
+                    else {
+                        x = true;
+                        move = true;
+                        break;
+                    }
+                }
             }
         }
         if (x != true) {
@@ -356,6 +432,9 @@ function stop(board, combinations) {
 }
 
 function computer_turn() {
+
+    activated = true;
+
     document.getElementById("turn").innerHTML = "It is your turn";
     if (turn_list.length == 0) {
         document.getElementById("block-7").innerHTML = "X";
@@ -386,20 +465,44 @@ function computer_turn() {
             for (r = 0; r < combinations[a].length; r++) {
                 if (board[combinations[a][r]].length == 0) {
                     board[combinations[a][r]] = "X";
-                    var temp = (combinations[a][r]);
+                    var temp = (combinations[a][r]);            
                     temp = temp.replace("block", "block-");
                     document.getElementById(temp).innerHTML = "X";
+
                 }
             }
         }
         else if (x == true) {
             for (w = 0; w < combinations[k].length; w++) {
                 if (board[combinations[k][w]].length == 0) {
+                    if (board[combinations[k][w]] == "X") {
+                    }
                     board[combinations[k][w]] = "X";
                     var temp = (combinations[k][w]);
                     temp = temp.replace("block", "block-");
                     document.getElementById(temp).innerHTML = "X";
                 }
+            }
+        }
+
+        else {
+            if (board.block1 == "") {
+                board.block1 = "X";
+                document.getElementById("block-1").innerHTML = "X";
+            }
+
+            else if (board.block3 == "") {
+                board.block3 = "X";
+                document.getElementById("block-3").innerHTML = "X";
+            }
+            if (board.block7 == "") {
+                board.block7 = "X";
+                document.getElementById("block-7").innerHTML = "X";
+            }
+
+            else if (board.block9 == "") {
+                board.block9 = "X";
+                document.getElementById("block-9").innerHTML = "X";
             }
         }
     }
@@ -409,71 +512,135 @@ function computer_turn() {
 
 // Function that checks if someone has won the game
 function check() {
-
     if ((document.getElementById("block-1").innerHTML == document.getElementById("block-2").innerHTML) &&
         (document.getElementById("block-1").innerHTML == document.getElementById("block-3").innerHTML) &&
         (document.getElementById("block-2").innerHTML == document.getElementById("block-3").innerHTML) &&
         (((document.getElementById("block-1").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
 
-    if ((document.getElementById("block-4").innerHTML == document.getElementById("block-5").innerHTML) &&
+    else if ((document.getElementById("block-4").innerHTML == document.getElementById("block-5").innerHTML) &&
         (document.getElementById("block-4").innerHTML == document.getElementById("block-6").innerHTML) &&
         (document.getElementById("block-5").innerHTML == document.getElementById("block-6").innerHTML) &&
         (((document.getElementById("block-4").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
 
-    if ((document.getElementById("block-7").innerHTML == document.getElementById("block-8").innerHTML) &&
+    else if ((document.getElementById("block-7").innerHTML == document.getElementById("block-8").innerHTML) &&
         (document.getElementById("block-7").innerHTML == document.getElementById("block-9").innerHTML) &&
         (document.getElementById("block-8").innerHTML == document.getElementById("block-9").innerHTML) &&
         (((document.getElementById("block-7").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
 
-    if ((document.getElementById("block-1").innerHTML == document.getElementById("block-4").innerHTML) &&
+    else if ((document.getElementById("block-1").innerHTML == document.getElementById("block-4").innerHTML) &&
         (document.getElementById("block-1").innerHTML == document.getElementById("block-7").innerHTML) &&
         (document.getElementById("block-4").innerHTML == document.getElementById("block-7").innerHTML) &&
         (((document.getElementById("block-1").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
 
-    if ((document.getElementById("block-2").innerHTML == document.getElementById("block-5").innerHTML) &&
+    else if ((document.getElementById("block-2").innerHTML == document.getElementById("block-5").innerHTML) &&
         (document.getElementById("block-2").innerHTML == document.getElementById("block-8").innerHTML) &&
         (document.getElementById("block-5").innerHTML == document.getElementById("block-8").innerHTML) &&
         (((document.getElementById("block-2").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
 
-    if ((document.getElementById("block-3").innerHTML == document.getElementById("block-6").innerHTML) &&
+    else if ((document.getElementById("block-3").innerHTML == document.getElementById("block-6").innerHTML) &&
         (document.getElementById("block-3").innerHTML == document.getElementById("block-9").innerHTML) &&
         (document.getElementById("block-6").innerHTML == document.getElementById("block-9").innerHTML) &&
         (((document.getElementById("block-3").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
 
-    if ((document.getElementById("block-1").innerHTML == document.getElementById("block-4").innerHTML) &&
+    else if ((document.getElementById("block-1").innerHTML == document.getElementById("block-4").innerHTML) &&
         (document.getElementById("block-1").innerHTML == document.getElementById("block-7").innerHTML) &&
         (document.getElementById("block-4").innerHTML == document.getElementById("block-7").innerHTML) &&
         (((document.getElementById("block-1").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
 
-    if ((document.getElementById("block-1").innerHTML == document.getElementById("block-5").innerHTML) &&
+    else if ((document.getElementById("block-1").innerHTML == document.getElementById("block-5").innerHTML) &&
         (document.getElementById("block-1").innerHTML == document.getElementById("block-9").innerHTML) &&
         (document.getElementById("block-5").innerHTML == document.getElementById("block-9").innerHTML) &&
         (((document.getElementById("block-1").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
 
-    if ((document.getElementById("block-3").innerHTML == document.getElementById("block-5").innerHTML) &&
+    else if ((document.getElementById("block-3").innerHTML == document.getElementById("block-5").innerHTML) &&
         (document.getElementById("block-3").innerHTML == document.getElementById("block-7").innerHTML) &&
         (document.getElementById("block-5").innerHTML == document.getElementById("block-7").innerHTML) &&
         (((document.getElementById("block-3").innerHTML).length) != 0)){
-        document.getElementById("display-result").innerHTML = (turn + " team has won the game");
+        document.getElementById("display-result").innerHTML = ("The computer has won the game");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
     }
+
+    else if (((document.getElementById("block-1").innerHTML).length != 0) &&
+       ((document.getElementById("block-2").innerHTML).length != 0) &&
+       ((document.getElementById("block-3").innerHTML).length != 0) &&
+       ((document.getElementById("block-4").innerHTML).length != 0) &&
+       ((document.getElementById("block-5").innerHTML).length != 0) &&
+       ((document.getElementById("block-6").innerHTML).length != 0) &&
+       ((document.getElementById("block-7").innerHTML).length != 0) &&
+       ((document.getElementById("block-8").innerHTML).length != 0) &&
+       ((document.getElementById("block-9").innerHTML).length != 0)) {
+        document.getElementById("display-result").innerHTML = ("It was a tie");
+        document.getElementById("turn").innerHTML = "";
+        over = true;
+    }
+}    
+
+
+// Function that resets the game board
+
+function reset() {
+    document.getElementById("block-1").innerHTML = "";
+    document.getElementById("block-2").innerHTML = "";
+    document.getElementById("block-3").innerHTML = "";
+    document.getElementById("block-4").innerHTML = "";
+    document.getElementById("block-5").innerHTML = "";
+    document.getElementById("block-6").innerHTML = "";
+    document.getElementById("block-7").innerHTML = "";
+    document.getElementById("block-8").innerHTML = "";
+    document.getElementById("block-9").innerHTML = "";
+
+    turn_list = [];
+
+    board = {
+        block1: "",
+        block2: "",
+        block3: "",
+        block4: "",
+        block5: "",
+        block6: "",
+        block7: "",
+        block8: "",
+        block9: ""
+    };
+
+    document.getElementById("display-result").innerHTML = "";
+    document.getElementById("turn").innerHTML = "";
+    over = false;
+    activated = false;
 }
-    
 
 
 
